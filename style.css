@@ -1,0 +1,19 @@
+body {
+    /* background-color:rgb(30, 30, 30); */
+    background-image: linear-gradient(120deg, rgb(19, 19, 19), rgb(40, 40, 40)); 
+    color: rgb(240, 240, 240);
+}
+
+header {
+    text-align: center;
+    background-image: linear-gradient(600deg, rgb(188, 188, 188), rgb(224, 211, 148)); 
+    color: rgb(30, 30, 30);
+    border-bottom: 40px solid rgb(40, 40, 40);
+    height: 325px;
+}
+
+svg {
+    border: 5px solid rgb(120, 120, 120); 
+    /* display:inline;  */
+    background-color: white;
+}

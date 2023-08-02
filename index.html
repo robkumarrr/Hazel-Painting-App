@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - Robert Kumar - 000883986</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="painting.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="p-5 mb-4">
+        <div class="header_text">
+            <h1 class="fw-bold mt-5 display-1">Leonardo da Hazel</h1>
+            <h6 class="">Robert Kumar - 000883986</h6>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="mb-4">
+                    <h3 class="text-center">Welcome!</h3>
+                    <p>Hazel has tasked you with an important mission. You must paint a perfect portrait of her to capture her unwavering beauty. Good luck. If you fail, she will demand belly rubs. Actually, regardless of the outcome, she demands belly rubs!</p>
+                    <div class="text-center">
+                        <img class="rounded w-50" src="./assets/hazel_beautiful.png" alt="Hazel, Queen of the Earth">
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-center">How to Play:</h3>
+                    <ul>
+                        <li>Select your brush size.</li>
+                        <li>Select your paint colour.</li>
+                        <li>Press 'W' to activate and deactivate your paint brush to start painting on the canvas</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4 text-center">
+                    <h3>Brush Size</h3>
+                    <input class="slider w-100" type="range" min="1" max="100" value="25" id="myRange">
+                    <div id="text_output">25</div>
+                </div>
+                
+                <div class="mb-4 text-center">
+                    <h3>Brush Colour</h3>
+                    <h5>Current Colour:</h5>
+                    <div class="text-center px-2 rounded-pill w-50 mx-auto" id="colour_sample">Colour Sample</div>
+                    <div id="current_colour"></div>
+                    <label class="mx-2" for="r">Red</label>
+                    <input class="slider w-100" type="range" min="0" max="255" value="25" id="r" onchange="colourPicker()">
+                    <label class="mx-2" for="g">Green</label>
+                    <input class="slider w-100" type="range" min="0" max="255" value="25" id="g" onchange="colourPicker()">
+                    <label class="mx-2" for="b">Blue</label>
+                    <input class="slider w-100" type="range" min="0" max="255" value="25" id="b" onchange="colourPicker()">
+                </div>
+
+            </div>
+
+            <div class="col-md-8">
+                <div class="text-center rounded-pill w-25 mx-auto" id="brush_status">
+                </div>
+
+                <div class="w-100 px-5 py-3">
+                    <!-- viewBox knowledge is courtesy of:  
+                        https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio -->
+                    <svg class="rounded-5" id="game" viewBox="0 0 1000 1000" preserveAspectRatio="none" height="100%" width="100%"></svg>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger" onclick="clearAll()">Clear Canvas</button>
+                </div>
+
+            </div>
+
+        </div>        
+    </div>
+
+    <footer class="text-white text-center fw-bold mt-4">
+        <p>&#169; Robert Kumar, 2023, Mohawk College</p>
+    </footer>
+    
+</body>
+</html>
